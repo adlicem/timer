@@ -16,7 +16,14 @@
 
     <h2 id="timerDisplay"></h2>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+
+       if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("Service Worker Registered"));
+} 
+        
+    </script>
 </body>
 </html>
 
